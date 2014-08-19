@@ -1,0 +1,141 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  
+  <parent>
+    <groupId>com.github.goalhub</groupId>
+    <artifactId>krTools</artifactId>
+    <version>0.1</version>
+  </parent>
+  
+  <groupId>com.github.goalhub.krTools</groupId>
+  <artifactId>krInterface</artifactId>
+  <version>0.1</version>
+  <packaging>jar</packaging>
+  
+  <name>The Knowledge Representation Interface</name>
+  <url>https://github.com/goalhub/krTools/tree/master/krInterface</url>
+  <description>The Knowledge Representation (KR) Interface defines an interface that provides access to various knowledge representation technologies in a generic way. It provides support for processing a KR language (e.g., parsing), database storage, and querying and updating of a database.</description>
+
+  <licenses>
+  	<license>
+    	<name>The GNU General Public License, Version 3.0</name>
+    	<url>http://www.gnu.org/licenses/gpl-3.0.txt</url>
+  	</license>
+  </licenses>
+  
+  <developers>
+    <developer>
+      <name>Koen Hindriks</name>
+      <email>k.v.hindriks@gmail.com</email>
+      <organization>goalhub</organization>
+      <organizationUrl>https://github.com/koenhindriks</organizationUrl>
+    </developer>
+  </developers>
+  
+  <organization>
+  	<name>goalhub</name>
+  	<url>https://github.com/goalhub</url>
+  </organization>
+
+  <issueManagement>
+  	<url>https://github.com/goalhub/krTools/issues</url>
+  	<system>Github Issues</system>
+  </issueManagement>
+  
+  <scm>
+  	<connection>scm:git:git@github.com:goalhub/krTools.git</connection>
+  	<developerConnection>scm:git:git@github.com:goalhub/krTools.git</developerConnection>
+  	<url>https://github.com:goalhub/krTools</url>
+  </scm>
+    
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <github.global.server>github</github.global.server>
+  </properties>
+  
+  	<repositories>
+		<repository>
+			<id>goalhub-mvn-repo</id>
+			<url>https://raw.github.com/goalhub/mvn-repo/master</url>
+		</repository>
+	</repositories>
+	
+  	<distributionManagement>
+		<repository>
+        	<id>internal.repo</id>
+        	<name>Temporary Staging Repository</name>
+        	<url>file://${project.build.directory}/mvn-repo</url>
+        </repository>
+	</distributionManagement>
+
+  <dependencies>	
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.11</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+  
+  <build>
+  	<plugins>
+  		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-javadoc-plugin</artifactId>
+			<version>2.9.1</version>
+			<executions>
+				<execution>
+					<id>attach-javadocs</id>
+					<goals>
+						<goal>jar</goal>
+					</goals>
+				</execution>
+			</executions>
+		</plugin>
+		
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-deploy-plugin</artifactId>
+			<version>2.8.1</version>
+			<configuration>
+				<altDeploymentRepository>internal.repo::default::file://${project.build.directory}/mvn-repo</altDeploymentRepository>
+			</configuration>
+		</plugin>
+		
+		<plugin>
+			<groupId>com.github.github</groupId>
+			<artifactId>site-maven-plugin</artifactId>
+			<version>0.9</version>
+			<configuration>
+				<!-- git commit message -->
+				<message>Maven artifacts for ${project.name} environment version ${project.version}</message>
+				<!-- matches distribution management repository url above -->
+				<outputDirectory>${project.build.directory}/mvn-repo</outputDirectory>
+				<!-- remote branch name -->
+				<branch>refs/heads/master</branch>
+				<merge>true</merge>
+				<includes>
+					<include>**/*</include>
+				</includes>
+				<!-- github repo name -->
+				<repositoryName>mvn-repo</repositoryName>
+				<!-- github organization -->
+                <repositoryOwner>goalhub</repositoryOwner>
+                <dryrun>true</dryrun>
+			</configuration>
+            <executions>
+            	<!-- run site-maven-plugin's 'site' target as part of the build's normal 'deploy' phase -->
+            	<execution>
+            		<goals>
+            			<goal>site</goal>
+            		</goals>
+            		<phase>deploy</phase>
+            	</execution>
+            </executions>
+		</plugin>
+  	</plugins>
+  </build>
+
+</project>
