@@ -1,6 +1,0 @@
-#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
-#Thu Nov 27 14:40:49 CET 2014
-messaging-1.0.0.jar>=
-messaging-1.0.0-tests.jar>=
-messaging-1.0.0-javadoc.jar>=
-messaging-1.0.0.pom>=
