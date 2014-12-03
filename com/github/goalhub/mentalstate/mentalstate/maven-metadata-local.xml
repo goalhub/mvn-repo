@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <metadata>
-  <groupId>com.github.goalhub.goalKrTools</groupId>
-  <artifactId>goalKrInterface</artifactId>
+  <groupId>com.github.goalhub.mentalstate</groupId>
+  <artifactId>mentalstate</artifactId>
   <versioning>
     <release>1.0.0</release>
     <versions>
       <version>1.0.0</version>
     </versions>
-    <lastUpdated>20141203142436</lastUpdated>
+    <lastUpdated>20141203153702</lastUpdated>
   </versioning>
 </metadata>

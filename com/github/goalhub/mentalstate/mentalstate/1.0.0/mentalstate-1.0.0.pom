@@ -4,15 +4,14 @@
 	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.github.goalhub.goalKrTools</groupId>
-	<artifactId>goalKrInterface</artifactId>
+	<groupId>com.github.goalhub.mentalstate</groupId>
+	<artifactId>mentalstate</artifactId>
 	<version>1.0.0</version>
 	<packaging>jar</packaging>
 
-	<name>Extended KR Interface with GOAL specific functionality</name>
-	<url>https://github.com/goalhub/krTools/tree/master/goalKrInterface</url>
-	<description>GOAL KR Interface defines an interface that provides access to various knowledge representation technologies in a generic way. It provides support for processing a KR language (e.g., parsing), database storage, and querying and updating of a database,
-	and also additional functionality for GOAL.</description>
+	<name>Mental State Interface definition</name>
+	<url>https://github.com/goalhub/goalKrTools/tree/master/goalKrInterface</url>
+	<description>Provides an interface to access an agent's mental state in a generic way, independent of the specific language specification.</description>
 
 	<licenses>
 		<license>
@@ -34,13 +33,13 @@
 	</organization>
 
 	<issueManagement>
-		<url>https://github.com/goalhub/goalKrTtools/issues</url>
+		<url>https://github.com/goalhub/mentalState/issues</url>
 		<system>Github Issues</system>
 	</issueManagement>
 
 	<scm>
-		<connection>scm:git:git@github.com:goalhub/goalKrTools.git</connection>
-		<developerConnection>scm:git:git@github.com:goalhub/goalKrTools.git</developerConnection>
+		<connection>scm:git:git@github.com:goalhub/mentalState.git</connection>
+		<developerConnection>scm:git:git@github.com:goalhub/mentalState.git</developerConnection>
 	</scm>
 
 	<properties>
@@ -70,12 +69,6 @@
 	</distributionManagement>
 
 	<dependencies>
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.11</version>
-			<scope>test</scope>
-		</dependency>
 
 		<dependency>
 			<groupId>com.github.goalhub.krTools</groupId>
