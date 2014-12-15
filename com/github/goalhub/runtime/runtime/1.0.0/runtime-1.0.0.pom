@@ -85,7 +85,7 @@
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.11</version>
+			<version>4.12</version>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
@@ -165,9 +165,9 @@
 				<artifactId>site-maven-plugin</artifactId>
 				<version>0.10</version>
 				<configuration>
+					<server>github</server>
 					<!-- git commit message -->
-					<message>Maven artifacts for ${project.name} environment version
-						${project.version}</message>
+					<message>Maven artifacts for ${project.name} version ${project.version}</message>
 					<!-- matches distribution management repository url above -->
 					<outputDirectory>${project.build.directory}/mvn-repo</outputDirectory>
 					<!-- remote branch name -->
