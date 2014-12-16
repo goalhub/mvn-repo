@@ -44,87 +44,87 @@
 		<developerConnection>scm:git:git@github.com:goalhub/simpleIDE.git</developerConnection>
 		<url>https://github.com:goalhub/simpleIDE</url>
 	</scm>
+	
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
 
 	<repositories>
 		<repository>
 			<id>goalhub-mvn-repo</id>
 			<url>https://raw.github.com/goalhub/mvn-repo/master</url>
 		</repository>
+
+		<repository>
+			<id>eishub-mvn-repo</id>
+			<url>https://raw.github.com/eishub/mvn-repo/master</url>
+		</repository>
 	</repositories>
 
-	<dependencies>
+	<dependencies>		
 		<dependency>
 			<groupId>com.github.goalhub.runtime</groupId>
 			<artifactId>runtime</artifactId>
-			<version>1.0.0</version>
+			<version>1.0.1</version>
 		</dependency>
-
-		<dependency>
-			<groupId>org.gjt.sp.jedit</groupId>
-			<artifactId>jedit</artifactId>
-			<version>1.0</version>
-		</dependency>
-
+		
 		<dependency>
 			<groupId>com.github.goalhub.simpleide</groupId>
 			<artifactId>osxadapter</artifactId>
 			<version>1.0.0</version>
 		</dependency>
-
+		
 		<dependency>
-			<groupId>com.github.goalhub.messaging</groupId>
-			<artifactId>messaginginterface</artifactId>
-			<version>1.1.1</version>
+			<groupId>org.gjt.sp.jedit</groupId>
+			<artifactId>jedit</artifactId>
+			<version>1.0</version>
 		</dependency>
-
-		<dependency>
-			<groupId>com.github.goalhub.krTools</groupId>
-			<artifactId>krFactory</artifactId>
-			<version>1.1.0</version>
-		</dependency>
-
-		<dependency>
-			<groupId>eishub</groupId>
-			<artifactId>eis</artifactId>
-			<version>0.4</version>
-		</dependency>
-
-		<dependency>
-			<groupId>com.github.goalhub.krTools.krLanguages</groupId>
-			<artifactId>swiprolog</artifactId>
-			<version>1.1.0</version>
-		</dependency>
-
-		<dependency>
-			<groupId>com.github.goalhub.mentalstate</groupId>
-			<artifactId>mentalstateinterface</artifactId>
-			<version>1.3.0</version>
-		</dependency>
-
-		<dependency>
-			<groupId>com.github.goalhub.grammar</groupId>
-			<artifactId>languageTools</artifactId>
-			<version>1.1.0</version>
-		</dependency>
-
-		<dependency>
-			<groupId>com.github.goalhub.krTools</groupId>
-			<artifactId>krInterface</artifactId>
-			<version>1.1.0</version>
-		</dependency>
-
+		
 		<dependency>
 			<groupId>commons-io</groupId>
 			<artifactId>commons-io</artifactId>
 			<version>2.4</version>
 		</dependency>
-
-
+		
+		<dependency>
+			<groupId>com.github.goalhub.krTools</groupId>
+			<artifactId>krInterface</artifactId>
+			<version>1.1.1</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.github.goalhub.krTools</groupId>
+			<artifactId>krFactory</artifactId>
+			<version>1.1.1</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.github.goalhub.mentalstate</groupId>
+			<artifactId>mentalstateinterface</artifactId>
+			<version>1.3.1</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>eishub</groupId>
+			<artifactId>eis</artifactId>
+			<version>0.4</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.github.goalhub.grammar</groupId>
+			<artifactId>languageTools</artifactId>
+			<version>1.1.1</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.github.goalhub.messaging</groupId>
+			<artifactId>messaginginterface</artifactId>
+			<version>1.1.3</version>
+		</dependency>
 	</dependencies>
 
 	<build>
 		<plugins>
-
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-dependency-plugin</artifactId>
@@ -132,6 +132,7 @@
 				<executions>
 					<execution>
 						<id>analyze</id>
+						<phase>verify</phase>
 						<goals>
 							<goal>analyze-only</goal>
 						</goals>
@@ -204,7 +205,7 @@
 					</execution>
 				</executions>
 			</plugin>
-
+			
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-deploy-plugin</artifactId>
@@ -219,9 +220,9 @@
 				<artifactId>site-maven-plugin</artifactId>
 				<version>0.10</version>
 				<configuration>
+					<server>github</server>
 					<!-- git commit message -->
-					<message>Maven artifacts for ${project.name} environment version
-						${project.version}</message>
+					<message>Maven artifacts for ${project.name} version ${project.version}</message>
 					<!-- matches distribution management repository url above -->
 					<outputDirectory>${project.build.directory}/mvn-repo</outputDirectory>
 					<!-- remote branch name -->
@@ -234,11 +235,9 @@
 					<repositoryName>mvn-repo</repositoryName>
 					<!-- github organization -->
 					<repositoryOwner>goalhub</repositoryOwner>
-					<dryrun>true</dryrun>
 				</configuration>
 				<executions>
-					<!-- run site-maven-plugin's 'site' target as part of the build's normal 
-						'deploy' phase -->
+					<!-- run site-maven-plugin as part of the build's 'deploy' phase -->
 					<execution>
 						<goals>
 							<goal>site</goal>
@@ -247,8 +246,6 @@
 					</execution>
 				</executions>
 			</plugin>
-
 		</plugins>
 	</build>
-
 </project>
