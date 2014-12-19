@@ -3,11 +3,9 @@
   <groupId>com.github.goalhub.simpleide</groupId>
   <artifactId>simpleide</artifactId>
   <versioning>
-    <release>1.0.1</release>
     <versions>
-      <version>1.0.1</version>
       <version>1.0.2-SNAPSHOT</version>
     </versions>
-    <lastUpdated>20141218144748</lastUpdated>
+    <lastUpdated>20141219182133</lastUpdated>
   </versioning>
 </metadata>
