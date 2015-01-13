@@ -127,11 +127,6 @@
 					<descriptorRefs>
 						<descriptorRef>jar-with-dependencies</descriptorRef>
 					</descriptorRefs>
-					<archive>
-						<manifest>
-							<mainClass>nl.tudelft.goal.SimpleIDE.SimpleIDE</mainClass>
-						</manifest>
-					</archive>
 				</configuration>
 				<executions>
 					<execution>
