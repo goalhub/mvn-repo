@@ -266,8 +266,7 @@
 				<configuration>
 					<server>github</server>
 					<!-- git commit message -->
-					<message>Maven artifacts for ${project.name} version
-						${project.version}</message>
+					<message>Maven artifacts for ${project.name} version ${project.version}</message>
 					<!-- matches distribution management repository url above -->
 					<outputDirectory>${project.build.directory}/mvn-repo</outputDirectory>
 					<!-- remote branch name -->
@@ -284,6 +283,7 @@
 				<executions>
 					<!-- run site-maven-plugin as part of the build's 'deploy' phase -->
 					<execution>
+						<id>git-deploy</id>
 						<goals>
 							<goal>site</goal>
 						</goals>
