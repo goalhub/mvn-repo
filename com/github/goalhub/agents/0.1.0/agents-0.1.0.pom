@@ -80,7 +80,6 @@
 							<resources>
 								<resource>
 									<directory>src/main/goal</directory>
-									<filtering>true</filtering>
 								</resource>
 							</resources>
 						</configuration>
