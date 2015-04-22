@@ -3,9 +3,10 @@
   <groupId>com.github.goalhub.grammar</groupId>
   <artifactId>languageTools</artifactId>
   <versioning>
+    <release>1.1.5</release>
     <versions>
-      <version>1.1.5-SNAPSHOT</version>
+      <version>1.1.5</version>
     </versions>
-    <lastUpdated>20150421222917</lastUpdated>
+    <lastUpdated>20150422081357</lastUpdated>
   </versioning>
 </metadata>
