@@ -1,0 +1,313 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<dest>${project.build.directory}/agents/</dest>
+	</properties>
+
+
+	<groupId>com.github.goalhub</groupId>
+	<artifactId>agents</artifactId>
+	<version>0.2.2</version>
+	<name>goal agents</name>
+	<description>GOAL agents ready to run from GOAL, 
+	complete with latest version of the environments.</description>
+	<url>http://www.github.com/goalhub/agents</url>
+
+	<licenses>
+		<license>
+			<name>The GNU General Public License, Version 3.0</name>
+			<url>http://www.gnu.org/licenses/gpl-3.0.txt</url>
+		</license>
+	</licenses>
+
+	<developers>
+		<developer>
+			<name>Koen Hindriks</name>
+			<email>k.v.hindriks@gmail.com</email>
+			<organization>goalhub</organization>
+			<organizationUrl>https://github.com/koenhindriks</organizationUrl>
+		</developer>
+	</developers>
+
+	<organization>
+		<name>goalhub</name>
+		<url>https://github.com/goalhub</url>
+	</organization>
+
+	<issueManagement>
+		<url>https://github.com/goalhub/agents/issues</url>
+		<system>Github Agents Issues</system>
+	</issueManagement>
+
+	<scm>
+		<connection>scm:git:git@github.com:goalhub/agents.git</connection>
+		<developerConnection>scm:git:git@github.com:goalhub/agents.git</developerConnection>
+		<url>https://github.com:goalhub/agents</url>
+	</scm>
+
+	<!-- No dependencies. We need to copy the environment jars in RAW format, 
+		not for resolving links. There is no source code anyway to resolve anything 
+		anyway. Check maven-dependency-plugin below. -->
+
+	<repositories>
+		<repository>
+			<id>eishub-mvn-repo</id>
+			<url>https://raw.github.com/eishub/mvn-repo/master</url>
+		</repository>
+	</repositories>
+
+	<build>
+		<plugins>
+
+			<plugin>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>2.7</version>
+				<executions>
+					<execution>
+						<id>copy-resources</id>
+						<phase>package</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${dest}</outputDirectory>
+							<resources>
+								<resource>
+									<directory>src/main/goal</directory>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<version>2.9</version>
+				<executions>
+					<execution>
+						<id>analyze</id>
+						<phase>verify</phase>
+						<goals>
+							<goal>analyze-only</goal>
+						</goals>
+						<configuration>
+							<failOnWarning>true</failOnWarning>
+							<ignoreNonCompile>true</ignoreNonCompile>
+						</configuration>
+					</execution>
+
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>copy</goal>
+						</goals>
+						<configuration>
+							<artifactItems>
+								<!-- Here are the items to couple to the MASs. IMPORTANT: If versions 
+									below are changed, the MAS2G files should be fixed accordingly. This has 
+									to be done manually. -->
+
+								<artifactItem>
+									<groupId>eishub</groupId>
+									<artifactId>ElevatorSim</artifactId>
+									<version>1.3.0</version>
+									<type>jar</type>
+									<overWrite>false</overWrite>
+									<outputDirectory>${dest}Elevator/</outputDirectory>
+								</artifactItem>
+
+								<artifactItem>
+									<groupId>eishub</groupId>
+									<artifactId>blocksworld</artifactId>
+									<version>1.1.0</version>
+									<type>jar</type>
+									<overWrite>false</overWrite>
+									<outputDirectory>${dest}BlocksWorld/</outputDirectory>
+								</artifactItem>
+
+								<artifactItem>
+									<groupId>eishub.bw4t</groupId>
+									<artifactId>bw4t-client</artifactId>
+									<version>3.8.0</version>
+									<classifier>jar-with-dependencies</classifier>
+									<type>jar</type>
+									<overWrite>false</overWrite>
+									<outputDirectory>${dest}BW4T/</outputDirectory>
+								</artifactItem>
+
+								<artifactItem>
+									<groupId>eishub</groupId>
+									<artifactId>Carriage</artifactId>
+									<version>1.0.0</version>
+									<type>jar</type>
+									<overWrite>false</overWrite>
+									<outputDirectory>${dest}Carriage/</outputDirectory>
+								</artifactItem>
+
+								<artifactItem>
+									<groupId>eishub</groupId>
+									<artifactId>Domestic</artifactId>
+									<version>1.2.0</version>
+									<type>jar</type>
+									<overWrite>false</overWrite>
+									<outputDirectory>${dest}Domestic/</outputDirectory>
+								</artifactItem>
+
+								<artifactItem>
+									<groupId>eishub</groupId>
+									<artifactId>ElevatorSim</artifactId>
+									<version>1.3.0</version>
+									<type>jar</type>
+									<overWrite>false</overWrite>
+									<outputDirectory>${dest}Elevator/</outputDirectory>
+								</artifactItem>
+
+								<artifactItem>
+									<groupId>eishub</groupId>
+									<artifactId>HelloWorldEnvironment</artifactId>
+									<version>1.1.0</version>
+									<type>jar</type>
+									<overWrite>false</overWrite>
+									<outputDirectory>${dest}HelloWorld/</outputDirectory>
+								</artifactItem>
+
+								<artifactItem>
+									<groupId>eishub</groupId>
+									<artifactId>Tic-Tac-Toe</artifactId>
+									<version>1.2.0</version>
+									<type>jar</type>
+									<overWrite>false</overWrite>
+									<outputDirectory>${dest}TicTacToe/</outputDirectory>
+								</artifactItem>
+
+								<artifactItem>
+									<groupId>eishub</groupId>
+									<artifactId>tower</artifactId>
+									<version>1.2.0</version>
+									<type>jar</type>
+									<overWrite>false</overWrite>
+									<outputDirectory>${dest}Tower/</outputDirectory>
+								</artifactItem>
+
+								<artifactItem>
+									<groupId>eishub</groupId>
+									<artifactId>vacuumworld</artifactId>
+									<version>1.0.0</version>
+									<type>jar</type>
+									<overWrite>false</overWrite>
+									<outputDirectory>${dest}VacuumWorld/</outputDirectory>
+								</artifactItem>
+
+								<artifactItem>
+									<groupId>eishub</groupId>
+									<artifactId>wumpusworld</artifactId>
+									<version>1.2.0</version>
+									<type>jar</type>
+									<overWrite>false</overWrite>
+									<outputDirectory>${dest}WumpusAgents/</outputDirectory>
+								</artifactItem>
+
+							</artifactItems>
+							<outputDirectory>${project.build.directory}/agents/</outputDirectory>
+							<overWriteReleases>false</overWriteReleases>
+							<overWriteSnapshots>true</overWriteSnapshots>
+						</configuration>
+					</execution>
+
+					<execution>
+						<id>unpack</id>
+						<phase>package</phase>
+						<goals>
+							<goal>unpack</goal>
+						</goals>
+						<configuration>
+							<artifactItems>
+								<artifactItem>
+									<groupId>eishub.bw4t</groupId>
+									<artifactId>doc</artifactId>
+									<version>1.0.0-SNAPSHOT</version>
+									<type>jar</type>
+									<outputDirectory>${dest}BW4T/</outputDirectory>
+									<overWrite>false</overWrite>
+								</artifactItem>
+							</artifactItems>
+							<!--  needed to get outputDirectory inside the items work. Why? -->
+							<outputDirectory>${project.build.directory}/agents/</outputDirectory>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<version>2.5.2</version>
+				<configuration>
+					<descriptors>
+						<descriptor>bin.xml</descriptor>
+					</descriptors>
+				</configuration>
+				<executions>
+					<execution>
+						<id>make-assembly</id>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-deploy-plugin</artifactId>
+				<version>2.8.2</version>
+				<configuration>
+					<altDeploymentRepository>internal.repo::default::file://${project.build.directory}/mvn-repo</altDeploymentRepository>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>com.github.github</groupId>
+				<artifactId>site-maven-plugin</artifactId>
+				<version>0.10</version>
+				<configuration>
+					<server>github</server>
+					<!-- git commit message -->
+					<message>Maven artifacts for ${project.name} version
+						${project.version}</message>
+					<!-- matches distribution management repository url above -->
+					<outputDirectory>${project.build.directory}/mvn-repo</outputDirectory>
+					<!-- remote branch name -->
+					<branch>refs/heads/master</branch>
+					<merge>true</merge>
+					<includes>
+						<include>**/*</include>
+					</includes>
+					<!-- github repo name -->
+					<repositoryName>mvn-repo</repositoryName>
+					<!-- github organization -->
+					<repositoryOwner>goalhub</repositoryOwner>
+				</configuration>
+				<executions>
+					<!-- run site-maven-plugin as part of the build's 'deploy' phase -->
+					<execution>
+						<id>git-deploy</id>
+						<goals>
+							<goal>site</goal>
+						</goals>
+						<phase>deploy</phase>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+	
+</project>
