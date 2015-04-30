@@ -3,10 +3,10 @@
   <groupId>com.github.goalhub.simpleide</groupId>
   <artifactId>simpleidemodules</artifactId>
   <versioning>
-    <release>1.1.2</release>
+    <release>1.1.3</release>
     <versions>
-      <version>1.1.2</version>
+      <version>1.1.3</version>
     </versions>
-    <lastUpdated>20150422082740</lastUpdated>
+    <lastUpdated>20150430144718</lastUpdated>
   </versioning>
 </metadata>
