@@ -4,9 +4,8 @@
   <artifactId>krInterface</artifactId>
   <versioning>
     <versions>
-      <version>1.1.4-SNAPSHOT</version>
       <version>1.1.5-SNAPSHOT</version>
     </versions>
-    <lastUpdated>20150507124418</lastUpdated>
+    <lastUpdated>20150507142130</lastUpdated>
   </versioning>
 </metadata>
