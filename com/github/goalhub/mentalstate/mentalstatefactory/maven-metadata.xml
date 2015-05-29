@@ -3,10 +3,9 @@
   <groupId>com.github.goalhub.mentalstate</groupId>
   <artifactId>mentalstatefactory</artifactId>
   <versioning>
-    <release>1.1.7</release>
     <versions>
-      <version>1.1.7</version>
+      <version>1.1.8-SNAPSHOT</version>
     </versions>
-    <lastUpdated>20150529095113</lastUpdated>
+    <lastUpdated>20150529220344</lastUpdated>
   </versioning>
 </metadata>
