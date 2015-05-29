@@ -3,10 +3,9 @@
   <groupId>com.github.goalhub.krTools</groupId>
   <artifactId>krInterface</artifactId>
   <versioning>
-    <release>1.1.5</release>
     <versions>
-      <version>1.1.5</version>
+      <version>1.1.6-SNAPSHOT</version>
     </versions>
-    <lastUpdated>20150529094915</lastUpdated>
+    <lastUpdated>20150529220112</lastUpdated>
   </versioning>
 </metadata>
