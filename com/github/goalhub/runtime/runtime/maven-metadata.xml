@@ -3,10 +3,9 @@
   <groupId>com.github.goalhub.runtime</groupId>
   <artifactId>runtime</artifactId>
   <versioning>
-    <release>1.1.4</release>
     <versions>
-      <version>1.1.4</version>
+      <version>1.1.5-SNAPSHOT</version>
     </versions>
-    <lastUpdated>20150529095502</lastUpdated>
+    <lastUpdated>20150529225702</lastUpdated>
   </versioning>
 </metadata>
