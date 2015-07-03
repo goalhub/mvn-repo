@@ -5,38 +5,38 @@
   <version>1.1.6-SNAPSHOT</version>
   <versioning>
     <snapshot>
-      <timestamp>20150702.220244</timestamp>
+      <timestamp>20150703.220249</timestamp>
       <buildNumber>1</buildNumber>
     </snapshot>
-    <lastUpdated>20150702220244</lastUpdated>
+    <lastUpdated>20150703220249</lastUpdated>
     <snapshotVersions>
       <snapshotVersion>
         <extension>jar</extension>
-        <value>1.1.6-20150702.220244-1</value>
-        <updated>20150702220244</updated>
+        <value>1.1.6-20150703.220249-1</value>
+        <updated>20150703220249</updated>
       </snapshotVersion>
       <snapshotVersion>
         <extension>pom</extension>
-        <value>1.1.6-20150702.220244-1</value>
-        <updated>20150702220244</updated>
+        <value>1.1.6-20150703.220249-1</value>
+        <updated>20150703220249</updated>
       </snapshotVersion>
       <snapshotVersion>
         <classifier>javadoc</classifier>
         <extension>jar</extension>
-        <value>1.1.6-20150702.220244-1</value>
-        <updated>20150702220244</updated>
+        <value>1.1.6-20150703.220249-1</value>
+        <updated>20150703220249</updated>
       </snapshotVersion>
       <snapshotVersion>
         <classifier>jar-with-dependencies</classifier>
         <extension>jar</extension>
-        <value>1.1.6-20150702.220244-1</value>
-        <updated>20150702220244</updated>
+        <value>1.1.6-20150703.220249-1</value>
+        <updated>20150703220249</updated>
       </snapshotVersion>
       <snapshotVersion>
         <classifier>sources</classifier>
         <extension>jar</extension>
-        <value>1.1.6-20150702.220244-1</value>
-        <updated>20150702220244</updated>
+        <value>1.1.6-20150703.220249-1</value>
+        <updated>20150703220249</updated>
       </snapshotVersion>
     </snapshotVersions>
   </versioning>
