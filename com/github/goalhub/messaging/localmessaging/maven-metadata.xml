@@ -3,10 +3,9 @@
   <groupId>com.github.goalhub.messaging</groupId>
   <artifactId>localmessaging</artifactId>
   <versioning>
-    <release>1.1.6</release>
     <versions>
-      <version>1.1.6</version>
+      <version>1.1.7-SNAPSHOT</version>
     </versions>
-    <lastUpdated>20151001225644</lastUpdated>
+    <lastUpdated>20151001225624</lastUpdated>
   </versioning>
 </metadata>
