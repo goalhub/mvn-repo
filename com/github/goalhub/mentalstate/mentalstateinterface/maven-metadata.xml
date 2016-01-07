@@ -3,10 +3,10 @@
   <groupId>com.github.goalhub.mentalstate</groupId>
   <artifactId>mentalstateinterface</artifactId>
   <versioning>
-    <release>1.3.8</release>
+    <release>1.3.10</release>
     <versions>
-      <version>1.3.8</version>
+      <version>1.3.10</version>
     </versions>
-    <lastUpdated>20160106230742</lastUpdated>
+    <lastUpdated>20160107125233</lastUpdated>
   </versioning>
 </metadata>
