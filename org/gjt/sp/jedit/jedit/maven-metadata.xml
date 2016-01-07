@@ -3,9 +3,10 @@
   <groupId>org.gjt.sp.jedit</groupId>
   <artifactId>jedit</artifactId>
   <versioning>
+    <release>1.1.2</release>
     <versions>
-      <version>1.1.2-SNAPSHOT</version>
+      <version>1.1.2</version>
     </versions>
-    <lastUpdated>20160107000116</lastUpdated>
+    <lastUpdated>20160107133418</lastUpdated>
   </versioning>
 </metadata>
