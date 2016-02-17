@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>com.github.goalhub.mentalstate.msStates</groupId>
+  <artifactId>swiprologmentalstate</artifactId>
+  <versioning>
+    <versions>
+      <version>2.0.0-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20160217230754</lastUpdated>
+  </versioning>
+</metadata>
