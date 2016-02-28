@@ -5,44 +5,44 @@
   <version>2.0.0-SNAPSHOT</version>
   <versioning>
     <snapshot>
-      <timestamp>20160227.230438</timestamp>
+      <timestamp>20160228.230436</timestamp>
       <buildNumber>1</buildNumber>
     </snapshot>
-    <lastUpdated>20160227230438</lastUpdated>
+    <lastUpdated>20160228230436</lastUpdated>
     <snapshotVersions>
       <snapshotVersion>
         <extension>jar</extension>
-        <value>2.0.0-20160227.230438-1</value>
-        <updated>20160227230438</updated>
+        <value>2.0.0-20160228.230436-1</value>
+        <updated>20160228230436</updated>
       </snapshotVersion>
       <snapshotVersion>
         <extension>pom</extension>
-        <value>2.0.0-20160227.230438-1</value>
-        <updated>20160227230438</updated>
+        <value>2.0.0-20160228.230436-1</value>
+        <updated>20160228230436</updated>
       </snapshotVersion>
       <snapshotVersion>
         <classifier>javadoc</classifier>
         <extension>jar</extension>
-        <value>2.0.0-20160227.230438-1</value>
-        <updated>20160227230438</updated>
+        <value>2.0.0-20160228.230436-1</value>
+        <updated>20160228230436</updated>
       </snapshotVersion>
       <snapshotVersion>
         <classifier>tests</classifier>
         <extension>jar</extension>
-        <value>2.0.0-20160227.230438-1</value>
-        <updated>20160227230438</updated>
+        <value>2.0.0-20160228.230436-1</value>
+        <updated>20160228230436</updated>
       </snapshotVersion>
       <snapshotVersion>
         <classifier>jar-with-dependencies</classifier>
         <extension>jar</extension>
-        <value>2.0.0-20160227.230438-1</value>
-        <updated>20160227230438</updated>
+        <value>2.0.0-20160228.230436-1</value>
+        <updated>20160228230436</updated>
       </snapshotVersion>
       <snapshotVersion>
         <classifier>sources</classifier>
         <extension>jar</extension>
-        <value>2.0.0-20160227.230438-1</value>
-        <updated>20160227230438</updated>
+        <value>2.0.0-20160228.230436-1</value>
+        <updated>20160228230436</updated>
       </snapshotVersion>
     </snapshotVersions>
   </versioning>
