@@ -3,10 +3,10 @@
   <groupId>com.github.goalhub.krTools.krLanguages</groupId>
   <artifactId>swiprolog</artifactId>
   <versioning>
-    <release>1.1.6</release>
+    <release>1.2.0</release>
     <versions>
-      <version>1.1.6</version>
+      <version>1.2.0</version>
     </versions>
-    <lastUpdated>20160107125016</lastUpdated>
+    <lastUpdated>20160303092654</lastUpdated>
   </versioning>
 </metadata>
