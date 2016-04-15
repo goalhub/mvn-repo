@@ -3,10 +3,9 @@
   <groupId>com.github.goalhub.mentalstate</groupId>
   <artifactId>msInterface</artifactId>
   <versioning>
-    <release>2.0.1</release>
     <versions>
-      <version>2.0.1</version>
+      <version>2.0.2-SNAPSHOT</version>
     </versions>
-    <lastUpdated>20160415093552</lastUpdated>
+    <lastUpdated>20160415220434</lastUpdated>
   </versioning>
 </metadata>
