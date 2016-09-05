@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>com.github.goalhub.grammar.cognitiveKrLanguages</groupId>
+  <artifactId>cognitiveSwiprolog</artifactId>
+  <versioning>
+    <versions>
+      <version>1.0.0-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20160905220403</lastUpdated>
+  </versioning>
+</metadata>
