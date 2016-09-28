@@ -3,9 +3,10 @@
   <groupId>com.github.goalhub.krTools.krLanguages</groupId>
   <artifactId>swiPrologEnabler</artifactId>
   <versioning>
+    <release>1.2.2</release>
     <versions>
-      <version>1.2.2-SNAPSHOT</version>
+      <version>1.2.2</version>
     </versions>
-    <lastUpdated>20160503090511</lastUpdated>
+    <lastUpdated>20160928123209</lastUpdated>
   </versioning>
 </metadata>
